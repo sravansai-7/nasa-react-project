@@ -11,30 +11,34 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-#root{
+
+#root {
   min-height: 100vh;
   display: flex;
-  position: relative;
+  display: relative;
 }
-.imgContainer{
+
+.imgContainer {
   display: flex;
   flex-direction: column;
   max-height: 100vh;
   width: 100%;
 }
-.bgImage{
+
+.bgImage {
   width: 100%;
   height: 100%;
   flex: 1;
   object-fit: cover;
 }
 
-footer{
+footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -46,21 +50,21 @@ footer{
   padding: 1rem;
 }
 
-footer div{
+footer div {
   display: flex;
   flex-direction: column;
 }
 
-footer h2{
+footer h2 {
   font-size: 1.4rem;
 }
-footer h1{
+
+footer h1 {
   font-size: 0.9rem;
   font-weight: 200;
 }
 
-footer button{
-
+footer button {
   background: transparent;
   border: none;
   outline: none;
@@ -70,36 +74,37 @@ footer button{
   cursor: pointer;
 }
 
-footer button i{
+footer button i {
   font-size: 1.3rem;
 }
 
-footer button:hover{
+footer button:hover {
   opacity: 0.7;
-
 }
 
-.bgGradient{
+.bgGradient {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to top, #030615, rgba(255,255,255,0));
+  background: linear-gradient(to top, #030615, rgba(255, 255, 255, 0));
 }
 
-.sidebar{
+.sidebar {
   position: fixed;
   inset: 0;
   display: flex;
   flex-direction: column;
   z-index: 10;
 }
-.bgOverlay{
+
+.bgOverlay {
   position: absolute;
   inset: 0;
-  background-color: #030615;
+  background: #030615;
   opacity: 0.6;
 }
-.sidebarContents{
+
+.sidebarContents {
   z-index: 15;
   position: relative;
   display: flex;
@@ -113,16 +118,17 @@ footer button:hover{
   margin-left: auto;
   background: #030615;
 }
+
 .sidebarContents h2 {
   font-weight: 200;
   font-size: 1.4rem;
 }
-.sidebarContents div{
+
+.sidebarContents div {
   flex: 1;
-  font-size: 1.1rem;
 }
 
-.sidebarContents button{
+.sidebarContents button {
   background: transparent;
   color: white;
   border: none;
@@ -133,39 +139,44 @@ footer button:hover{
   padding: 1rem 0;
 }
 
-.sidebarContents button:hover{
+.sidebarContents button:hover {
   opacity: 0.7;
 }
 
-.descriptionTitle{
-  font-size: 1.1rem;
-  font-weight: 200;
-}
-.descriptionContainer{
+.descriptionContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.loadingState{
+
+.descriptionTitle {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.loadingState {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
+}
+
+.loadingState i {
+  opacity: 0.2;
+  font-size: 3rem;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  from{
+  from {
     transform: rotate(0deg);
-  }to{
+  }
+
+  to {
     transform: rotate(360deg);
   }
 }
-.loadingState i{
 
-  opacity: 0.2;
-  font-size: 3rem;
-}
 
 @media (min-width: 640px) {
   .sidebar {
